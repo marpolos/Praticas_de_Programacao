@@ -1,0 +1,56 @@
+body {
+    background-color: bisque;
+}
+h1, h2 {
+    color: rgb(241, 164, 40);
+    text-align: center;
+}
+h1 {
+    text-transform: uppercase;
+}
+p {
+    text-align: justify;
+    color: black;
+}
+
+.destaque {
+    color: rgb(133, 132, 132);
+    background-color: beige;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#img-logo {
+    width: 50px;
+    position: fixed;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+    color:rgb(47, 131, 119);
+    font-weight: bold;
+    border: 2px solid rgb(246, 177, 16);
+    padding: 5px;
+}
+
+nav {
+    float: right;
+}
+
+header {
+    background-color: beige;
+    height: 100px;
+}
+
+main {
+    margin: auto 20%;
+    padding: 5px;
+    background-color: wheat;
+}
+
+.boas-vindas {
+    font-weight: bolder;
+    color: palevioletred;
+}
