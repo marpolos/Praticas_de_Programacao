@@ -1,0 +1,15 @@
+body {
+    background-color: darkkhaki;
+    width: 50%;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: blueviolet;
+    text-align: center;
+}
+#resultado {
+    color: brown;
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Calculadora dinâmica
+        </h1>
+    </header>
+    <main>
+        <section>
+            <h2>
+                Calcule aqui:
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <p>Número</p>
+                        <input type="number" id="number_1">
+                    </div>
+                    <div>
+                        <p>Operador</p>
+                        <input type="text" id="operador">
+                    </div>
+                    <div>
+                        <p>Número</p>
+                        <input type="number" id="number_2">
+                    </div>
+                </div>
+                <hr/>
+                <button onclick="calcular()">Calcular!</button>
+            </div>
+            <h3>
+                Resultado:
+            </h3>
+            <span id="resultado"></span>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Exercício desenvolvido por Marcelle Monteiro para o curso de graduação em Análise e desenvolvimento de sistemas
+        </p>
+    </footer>
+    <script src="calculadora.js"></script>
+</body>
+</html>
