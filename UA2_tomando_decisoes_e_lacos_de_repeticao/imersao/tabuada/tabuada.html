@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="tabuada.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Tabuada
+        </h1>
+    </header>
+    <main>
+        <h2>
+            A tabuada de qual número quer ver?
+        </h2>
+        <input id="multiplicador" type="number">
+        <p> Se quiser até um número específico: </p> <input type="number" id="qtd">
+        <button onclick="calcular()">Calcular!</button>
+        <button onclick="limparBoxTabuada()">Limpar tela</button>
+        <div class="tabuada-box">
+
+        </div>
+    </main>
+    <footer>
+        <p>
+            Exercício de práticas de programação para o curso de Análise e Desenvolvimento de sistemas da Gran
+            Faculdade.
+        </p>
+    </footer>
+    <script src="tabuada.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+h1 {
+    color: chartreuse;
+    font-size: larger;
+}
+
+h2 {
+    font-size: large;
+    color:blueviolet;
+}
+
+.tabuada-box {
+    border:2px solid brown;
+    background-color:bisque;
+    margin-top: 5px;
+}
+
