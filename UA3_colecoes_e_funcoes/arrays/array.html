@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+        const carros = ['BMW', 'G10']
+        console.table(carros);
+        carros.push('Corola');
+        carros.unshift('New Beatle');
+
+        for(let carro of carros) {
+            console.log(carro);
+        }
+
+        carros.pop(); // retira do final
+        const primeiroCarro = carros.shift(); //retira do início
+
+        carros.splice(1, 0, primeiroCarro);
+        //carros.splice(2, 1); // Exclui nessa posição essa quantidade de elementos
+        carros.sort(); //ordernar
+        const cidades = new Array('RJ', 'SG');
+        console.table(cidades);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
