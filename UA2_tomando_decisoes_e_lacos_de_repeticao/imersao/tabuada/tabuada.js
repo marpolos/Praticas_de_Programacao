@@ -1,4 +1,5 @@
 function calcular() {
+    limparBoxTabuada();
     let multiplicador = document.getElementById("multiplicador").value;
     let qtd = document.getElementById("qtd").value;
     let caixaTabuada = document.getElementsByClassName("tabuada-box")[0];

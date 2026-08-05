@@ -1,7 +1,8 @@
 function pegarDivisores() {
     let numero = document.getElementById("numero").value;
     let box = document.getElementsByTagName("section")[0];
-
+    box.innerHTML = "";
+    
     let fim = numero * 10;
 
     for (let i = numero; i <= fim; i++) {
