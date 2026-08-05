@@ -9,7 +9,7 @@ function calcular() {
     console.log(operador, numero_1, numero_2);
     switch (operador) {
         case "+":
-            resultado = numero_1 + numero_2;
+            resultado = Number(numero_1) + Number(numero_2);
             break;
         case "-":
             resultado = numero_1 - numero_2;
