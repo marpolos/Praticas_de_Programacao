@@ -7,12 +7,14 @@ let jogador;;
 let aviso;
 let linha;
 let coluna;
+let alerta;
 
 function Iniciar() {
     tabuleiro = [];
     board = document.getElementById("board");
     aviso = document.getElementById("aviso");
-    jogador = 1;
+    alerta = document.getElementById("alerta");
+    jogador = 2;
 
     for(let i = 0; i<3; i++){
         tabuleiro[i] = [];
@@ -21,6 +23,8 @@ function Iniciar() {
         }
     }
     console.table(tabuleiro);
+    aviso.innerHTML = "Vez do jogador " + NumeroJogador();
+    alerta.innerHTML = "";
     Exibir();
 }
 
@@ -50,7 +54,8 @@ function Exibir() {
 }
 
 function Jogar() {
-    aviso.innerHTML = "Vez do jogador " + NumeroJogador();
+    alerta.innerHTML = "";
+    
     linha = document.getElementById("linha").value - 1;
     coluna = document.getElementById("coluna").value - 1;
     
@@ -58,8 +63,9 @@ function Jogar() {
         tabuleiro[linha][coluna] = NumeroJogador() == 1 ? 1 : -1;
         jogador++;
         Exibir();
+        aviso.innerHTML = "Vez do jogador " + NumeroJogador();
     } else {
-        aviso.innerHTML = "Posição já ocupada!";
+        alerta.innerHTML = "Posição já ocupada!";
     }
     Exibir();
     Checar();
@@ -72,6 +78,7 @@ function Checar() {
         somaLinha = tabuleiro[i][0] + tabuleiro[i][1] + tabuleiro[i][2];
         if(somaLinha == 3 || somaLinha == -3){
             aviso.innerHTML = "Jogador " + (jogador - 1) + " venceu!";
+            DesabilitarJogar()
         }
     }
 
@@ -81,6 +88,7 @@ function Checar() {
         somaColuna = tabuleiro[0][j] + tabuleiro[1][j] + tabuleiro[2][j];
         if(somaColuna == 3 || somaColuna == -3){
             aviso.innerHTML = "Jogador " + (jogador - 1) + " venceu!";
+            DesabilitarJogar()
         }
     }
 
@@ -90,9 +98,11 @@ function Checar() {
 
     if(somaDiagonal1 == 3 || somaDiagonal1 == -3){
         aviso.innerHTML = "Jogador " + (jogador - 1) + " venceu!";
+        DesabilitarJogar()
     }
     if(somaDiagonal2 == 3 || somaDiagonal2 == -3){
         aviso.innerHTML = "Jogador " + (jogador - 1) + " venceu!";
+        DesabilitarJogar()
     }
 
 }
@@ -101,4 +111,17 @@ function NumeroJogador() {
     console.log("Jogador: " + jogador);
     jogador = (jogador % 2) + 1;
     return jogador;
+}
+
+function Resetar() {
+    document.getElementById("jogar").disabled = false;
+    document.getElementById("restart").disabled = true;
+
+    Iniciar();
+}
+
+function DesabilitarJogar(){
+    document.getElementById("jogar").disabled = true;
+
+    document.getElementById("restart").disabled = false;
 }
