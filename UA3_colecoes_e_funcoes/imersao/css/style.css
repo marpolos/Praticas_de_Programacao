@@ -113,7 +113,8 @@ h1 {
 }
 
 .board {
-    width: min(100%, 370px);
+    width: 370px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 12px;
     border-radius: 22px;
